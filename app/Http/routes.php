@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource("cities","CityController");
+Route::resource("hotels","HotelController");
+Route::resource("cuisines","CuisineController");
+Route::resource("foods","FoodController");
+Route::resource("hotelfooddefaults","HotelfooddefaultController");
+Route::resource("hotelfooddailies","HotelfooddailyController");
+Route::resource("orders","OrderController");
+Route::auth();
+Route::get('/home', 'HomeController@index');
